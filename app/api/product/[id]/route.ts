@@ -8,6 +8,7 @@ export const GET = async (req: NextRequest) => {
     const singleProduct = await prisma.products.findUnique({
       where: { id: id },
     });
+
     return NextResponse.json(
       {
         success: true,
@@ -15,7 +16,17 @@ export const GET = async (req: NextRequest) => {
       },
       { status: 200 }
     );
-  } catch {
+  } catch (error) {
+    const err = error as any;
+    if (err.name === "PrismaClientKnownRequestError") {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Product not found",
+        },
+        { status: 404 }
+      );
+    }
     return NextResponse.json(
       {
         message: "Internal Server Error ",

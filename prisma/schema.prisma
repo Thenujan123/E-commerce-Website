@@ -29,3 +29,10 @@ model Products{
  
 
 }
+model Order{
+        id String @id @default(auto()) @map("_id") @db.ObjectId
+        cardItem Json
+        amount Int
+        status String
+        createdAt DateTime @default(now())
+}

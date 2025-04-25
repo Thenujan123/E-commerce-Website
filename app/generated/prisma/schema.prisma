@@ -26,3 +26,11 @@ model Products {
   stock        Int
   numOfReviews String?
 }
+
+model Order {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  cardItems Json
+  amount    Float
+  status    String
+  createdAt DateTime @default(now())
+}
