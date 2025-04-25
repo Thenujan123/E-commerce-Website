@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JVLcart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.cdnfonts.com/css/amazon-ember"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <style>
+      body {
+        font-family: "Amazon Ember", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Navbar -->
+    <nav
+      class="flex flex-col md:flex-row items-center justify-between px-4 py-3 shadow-md bg-white"
+    >
+      <div class="mb-2 md:mb-0">
+        <img src="./images/logo.png" alt="Logo" class="w-36" />
+      </div>
+
+      <!-- Search bar -->
+      <div class="flex w-full md:w-1/2">
+        <input
+          type="text"
+          id="search_field"
+          placeholder="Enter Product Name ..."
+          class="flex-grow border border-gray-300 rounded-l px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          id="search_btn"
+          class="bg-blue-600 text-white px-4 py-2 rounded-r hover:bg-blue-700"
+        >
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+
+      <!-- Cart -->
+      <div class="text-center mt-4 md:mt-0">
+        <span id="cart" class="text-lg font-medium">Cart</span>
+        <span
+          id="cart_count"
+          class="ml-2 text-sm bg-blue-600 text-white px-2 py-1 rounded-full"
+          >2</span
+        >
+      </div>
+    </nav>
+
+    <!-- Heading -->
+    <h1 id="products_heading" class="text-2xl font-semibold text-center mt-10">
+      Latest Products
+    </h1>
+
+    <!-- Products Section -->
+    <section id="products" class="max-w-7xl mx-auto px-4 mt-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product Card -->
+        <div class="bg-white rounded shadow p-4 flex flex-col">
+          <img
+            src="./images/products/1.jpg"
+            alt="Product"
+            class="mx-auto mb-4"
+          />
+          <h5 class="text-sm font-medium mb-2">
+            <a href="#" class="hover:text-blue-600">
+              OPPO F21s Pro 5G (Dawnlight Gold, 8GB RAM, 128 Storage)
+            </a>
+          </h5>
+          <div class="flex items-center space-x-1 mt-auto">
+            <div class="relative w-24 h-5 bg-gray-200 rounded overflow-hidden">
+              <div
+                class="absolute top-0 left-0 h-full bg-yellow-400 rating-inner"
+                style="width: 90%"
+              ></div>
+            </div>
+          </div>
+          <p class="mt-2 text-green-600 font-semibold">$245.67</p>
+          <a
+            href="#"
+            class="mt-2 bg-blue-600 text-white py-2 rounded text-center hover:bg-blue-700"
+          >
+            View Details
+          </a>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="bg-white rounded shadow p-4 flex flex-col">
+          <img
+            src="./images/products/2.jpg"
+            alt="Product"
+            class="mx-auto mb-4"
+          />
+          <h5 class="text-sm font-medium mb-2">
+            <a href="#" class="hover:text-blue-600">
+              WRISTIO HD, Bluetooth Calling Smart Watch
+            </a>
+          </h5>
+          <div class="flex items-center text-yellow-400 space-x-1 mt-auto">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i
+            ><i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i
+            ><i class="fa fa-star-o"></i>
+            <span class="text-sm text-gray-500 ml-1">(5 Reviews)</span>
+          </div>
+          <p class="mt-2 text-green-600 font-semibold">$150.32</p>
+          <a
+            href="#"
+            class="mt-2 bg-blue-600 text-white py-2 rounded text-center hover:bg-blue-700"
+          >
+            View Details
+          </a>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-white rounded shadow p-4 flex flex-col">
+          <img
+            src="./images/products/3.jpg"
+            alt="Product"
+            class="mx-auto mb-4"
+          />
+          <h5 class="text-sm font-medium mb-2">
+            <a href="#" class="hover:text-blue-600">
+              Dell Inspiron 3511 Laptop, Intel i3-1115G4, 8GB, 512GB
+            </a>
+          </h5>
+          <div class="flex items-center text-yellow-400 space-x-1 mt-auto">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i
+            ><i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i
+            ><i class="fa fa-star-o"></i>
+            <span class="text-sm text-gray-500 ml-1">(5 Reviews)</span>
+          </div>
+          <p class="mt-2 text-green-600 font-semibold">$440.57</p>
+          <a
+            href="#"
+            class="mt-2 bg-blue-600 text-white py-2 rounded text-center hover:bg-blue-700"
+          >
+            View Details
+          </a>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="bg-white rounded shadow p-4 flex flex-col">
+          <img
+            src="./images/products/4.jpg"
+            alt="Product"
+            class="mx-auto mb-4"
+          />
+          <h5 class="text-sm font-medium mb-2">
+            <a href="#" class="hover:text-blue-600">
+              PTron Newly Launched Tangent Sports
+            </a>
+          </h5>
+          <div class="flex items-center text-yellow-400 space-x-1 mt-auto">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i
+            ><i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i
+            ><i class="fa fa-star-o"></i>
+            <span class="text-sm text-gray-500 ml-1">(5 Reviews)</span>
+          </div>
+          <p class="mt-2 text-green-600 font-semibold">$15.46</p>
+          <a
+            href="#"
+            class="mt-2 bg-blue-600 text-white py-2 rounded text-center hover:bg-blue-700"
+          >
+            View Details
+          </a>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="bg-white rounded shadow p-4 flex flex-col">
+          <img
+            src="./images/products/5.jpg"
+            alt="Product"
+            class="mx-auto mb-4"
+          />
+          <h5 class="text-sm font-medium mb-2">
+            <a href="#" class="hover:text-blue-600">
+              Campus Men's Maxico Running Shoes
+            </a>
+          </h5>
+          <div class="flex items-center text-yellow-400 space-x-1 mt-auto">
+            <i class="fa fa-star"></i><i class="fa fa-star"></i
+            ><i class="fa fa-star"></i> <i class="fa fa-star-half-o"></i
+            ><i class="fa fa-star-o"></i>
+            <span class="text-sm text-gray-500 ml-1">(5 Reviews)</span>
+          </div>
+          <p class="mt-2 text-green-600 font-semibold">$10.12</p>
+          <a
+            href="#"
+            class="mt-2 bg-blue-600 text-white py-2 rounded text-center hover:bg-blue-700"
+          >
+            View Details
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-16 py-4 bg-gray-900 text-white text-center">
+      <p>JVLcart - 2023-2024, All Rights Reserved</p>
+    </footer>
+
+    <!-- Rating Script -->
+    <script>
+      const stars = 5;
+      const rating = 4.5;
+      const starPercentage = `${(rating / stars) * 100}%`;
+      document.querySelector(`.rating-inner`).style.width = starPercentage;
+    </script>
+  </body>
+</html>
